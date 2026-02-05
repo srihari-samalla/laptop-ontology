@@ -1,0 +1,897 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.com/laptopontology/"
+     xml:base="http://example.com/laptopontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.com/laptopontology">
+        <owl:versionIRI rdf:resource="http://example.com/laptopontology/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/laptopontology#IsFeatureOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/laptopontology#IsFeatureOf">
+        <owl:inverseOf rdf:resource="http://example.com/laptopontology#hasFeature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/laptopontology#LaptopMake -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/laptopontology#LaptopMake"/>
+    
+
+
+    <!-- http://example.com/laptopontology#hasCharacteristics -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/laptopontology#hasCharacteristics">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/laptopontology#hasFeature"/>
+        <owl:inverseOf rdf:resource="http://example.com/laptopontology#isCharacteristicsOf"/>
+        <rdfs:domain rdf:resource="http://example.com/laptopontology#Laptop"/>
+        <rdfs:range rdf:resource="http://example.com/laptopontology#LaptopCharacteristics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/laptopontology#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/laptopontology#hasComponent">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/laptopontology#hasFeature"/>
+        <owl:inverseOf rdf:resource="http://example.com/laptopontology#isComponentOf"/>
+        <rdfs:domain rdf:resource="http://example.com/laptopontology#Laptop"/>
+        <rdfs:range rdf:resource="http://example.com/laptopontology#LaptopComponents"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/laptopontology#hasFeature -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/laptopontology#hasFeature"/>
+    
+
+
+    <!-- http://example.com/laptopontology#hasPort -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/laptopontology#hasPort">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/laptopontology#hasFeature"/>
+        <owl:inverseOf rdf:resource="http://example.com/laptopontology#isPortOf"/>
+        <rdfs:domain rdf:resource="http://example.com/laptopontology#Laptop"/>
+        <rdfs:range rdf:resource="http://example.com/laptopontology#Port"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/laptopontology#hasSecurity -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/laptopontology#hasSecurity">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/laptopontology#hasFeature"/>
+        <rdfs:domain rdf:resource="http://example.com/laptopontology#Laptop"/>
+        <rdfs:range rdf:resource="http://example.com/laptopontology#SecuringMechanism"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/laptopontology#hasSensor -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/laptopontology#hasSensor">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/laptopontology#hasFeature"/>
+        <rdfs:domain rdf:resource="http://example.com/laptopontology#Laptop"/>
+        <rdfs:range rdf:resource="http://example.com/laptopontology#Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/laptopontology#isCharacteristicsOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/laptopontology#isCharacteristicsOf">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/laptopontology#IsFeatureOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/laptopontology#isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/laptopontology#isComponentOf">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/laptopontology#IsFeatureOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/laptopontology#isPortOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/laptopontology#isPortOf">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/laptopontology#IsFeatureOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/laptopontology#isSecurityOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/laptopontology#isSecurityOf">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/laptopontology#IsFeatureOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/laptopontology#isSensorOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/laptopontology#isSensorOf">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/laptopontology#IsFeatureOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/laptopontology#isrunOSOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/laptopontology#isrunOSOf">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/laptopontology#IsFeatureOf"/>
+        <owl:inverseOf rdf:resource="http://example.com/laptopontology#runOS"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/laptopontology#runOS -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/laptopontology#runOS">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/laptopontology#hasFeature"/>
+        <rdfs:domain rdf:resource="http://example.com/laptopontology#Laptop"/>
+        <rdfs:range rdf:resource="http://example.com/laptopontology#OperatingSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/laptopontology#AIEnabledSmartLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#AIEnabledSmartLaptop">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#SmartLaptop"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/laptopontology#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/laptopontology#Processor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#Accelerometer -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#Accelerometer">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#AmbientLightSensor -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#AmbientLightSensor">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#AudioJack -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#AudioJack">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Port"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#BIOSPassword -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#BIOSPassword">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#SecuringMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#BudgetLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#BudgetLaptop">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Laptop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#BusinessLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#BusinessLaptop">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Laptop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#BusinessSmartLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#BusinessSmartLaptop">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/laptopontology#SmartLaptop"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/laptopontology#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="http://example.com/laptopontology#Webcam"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#ComputingDevice -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#ComputingDevice"/>
+    
+
+
+    <!-- http://example.com/laptopontology#ConvertibleLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#ConvertibleLaptop">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Laptop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#CoolingFan -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#CoolingFan">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#LaptopComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#DeveloperSmartLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#DeveloperSmartLaptop">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/laptopontology#SmartLaptop"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/laptopontology#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="http://example.com/laptopontology#RAM"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#Display -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#Display">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#LaptopComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#FaceRecognition -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#FaceRecognition">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#SecuringMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#FingerprintScanner -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#FingerprintScanner">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#SecuringMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#GamingLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#GamingLaptop">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Laptop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#GamingSmartLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#GamingSmartLaptop">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#SmartLaptop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#HDMI -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#HDMI">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Port"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#KensingtonLock -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#KensingtonLock">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#SecuringMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#Keyboard -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#Keyboard">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#LaptopComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#Laptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#Laptop">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#ComputingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#LaptopCharacteristics -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#LaptopCharacteristics"/>
+    
+
+
+    <!-- http://example.com/laptopontology#LaptopComponents -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#LaptopComponents"/>
+    
+
+
+    <!-- http://example.com/laptopontology#LaptopMake -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#LaptopMake"/>
+    
+
+
+    <!-- http://example.com/laptopontology#LightweightSmartLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#LightweightSmartLaptop">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#SmartLaptop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#LinuxOS -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#LinuxOS">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#OperatingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#MacOS -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#MacOS">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#OperatingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#MedicalUseSmartLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#MedicalUseSmartLaptop">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#SmartLaptop"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/laptopontology#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/laptopontology#Storage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#Motherboard -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#Motherboard">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#LaptopComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#MultiPurposeSmartLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#MultiPurposeSmartLaptop">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#SmartLaptop"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/laptopontology#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/laptopontology#Motherboard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#OperatingSystem -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#OperatingSystem"/>
+    
+
+
+    <!-- http://example.com/laptopontology#PerformanceSmartLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#PerformanceSmartLaptop">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/laptopontology#SmartLaptop"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/laptopontology#hasCharacteristics"/>
+                        <owl:hasValue rdf:resource="http://example.com/laptopontology#Performance"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#Port -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#Port"/>
+    
+
+
+    <!-- http://example.com/laptopontology#Processor -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#Processor">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#LaptopComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#ProximitySensor -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#ProximitySensor">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#RAM -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#RAM">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#LaptopComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#SecuringMechanism -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#SecuringMechanism"/>
+    
+
+
+    <!-- http://example.com/laptopontology#Sensor -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#Sensor"/>
+    
+
+
+    <!-- http://example.com/laptopontology#SlimSmartLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#SlimSmartLaptop">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#SmartLaptop"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/laptopontology#hasCharacteristics"/>
+                <owl:hasValue rdf:resource="http://example.com/laptopontology#Portability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#SmartLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#SmartLaptop">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Laptop"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/laptopontology#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/laptopontology#Display"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/laptopontology#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/laptopontology#Keyboard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#SpecialistSmartLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#SpecialistSmartLaptop">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#SmartLaptop"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/laptopontology#hasCharacteristics"/>
+                <owl:hasValue rdf:resource="http://example.com/laptopontology#Security"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#Storage -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#Storage">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#LaptopComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#StudentLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#StudentLaptop">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Laptop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#TPMChip -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#TPMChip">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#SecuringMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#TemperatureSensor -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#TemperatureSensor">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#Thunderbolt -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#Thunderbolt">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Port"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#Touchpad -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#Touchpad">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#LaptopComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#USBPort -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#USBPort">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Port"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#USB_A -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#USB_A">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#USBPort"/>
+        <owl:disjointWith rdf:resource="http://example.com/laptopontology#USB_C"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#USB_C -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#USB_C">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#USBPort"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#Ultrabook -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#Ultrabook">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Laptop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#Webcam -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#Webcam">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#LaptopComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#WindowsOS -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#WindowsOS">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#OperatingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/laptopontology#WorkstationLaptop -->
+
+    <owl:Class rdf:about="http://example.com/laptopontology#WorkstationLaptop">
+        <rdfs:subClassOf rdf:resource="http://example.com/laptopontology#Laptop"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/laptopontology#ASUS -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#ASUS">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#Acer -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#Acer">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#Apple -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#Apple">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#Battery -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#Battery">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#Connectivity -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#Connectivity">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#Dell -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#Dell">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#Display -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#Display">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#Durability -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#Durability">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#HP -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#HP">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#LG -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#LG">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#Lenovo -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#Lenovo">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#Performance -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#Performance">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#Portability -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#Portability">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#Razer -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#Razer">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#Samsung -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#Samsung">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#Security -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#Security">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#Sony -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#Sony">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/laptopontology#Thermal -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/laptopontology#Thermal">
+        <rdf:type rdf:resource="http://example.com/laptopontology#LaptopCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com/laptopontology#Accelerometer"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#AmbientLightSensor"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#ProximitySensor"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#TemperatureSensor"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com/laptopontology#AudioJack"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#HDMI"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#Thunderbolt"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#USBPort"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com/laptopontology#BIOSPassword"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#FaceRecognition"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#FingerprintScanner"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#KensingtonLock"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#TPMChip"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com/laptopontology#BudgetLaptop"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#BusinessLaptop"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#ConvertibleLaptop"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#GamingLaptop"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#SmartLaptop"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#StudentLaptop"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#Ultrabook"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#WorkstationLaptop"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com/laptopontology#ComputingDevice"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#LaptopCharacteristics"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#LaptopComponents"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#LaptopMake"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com/laptopontology#ComputingDevice"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#LaptopCharacteristics"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#LaptopComponents"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#LaptopMake"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#OperatingSystem"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#Port"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#SecuringMechanism"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#Sensor"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com/laptopontology#LinuxOS"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#MacOS"/>
+            <rdf:Description rdf:about="http://example.com/laptopontology#WindowsOS"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
