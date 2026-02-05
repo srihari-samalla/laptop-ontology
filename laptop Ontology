@@ -1,0 +1,208 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+
+'==================================================
+' Core Device Hierarchy
+'==================================================
+class ComputingDevice
+class Laptop
+ComputingDevice <|-- Laptop
+
+'==================================================
+' Laptop Types
+'==================================================
+class GamingLaptop
+class BusinessLaptop
+class StudentLaptop
+class Ultrabook
+class WorkstationLaptop
+class ConvertibleLaptop
+class BudgetLaptop
+class SmartLaptop
+
+Laptop <|-- GamingLaptop
+Laptop <|-- BusinessLaptop
+Laptop <|-- StudentLaptop
+Laptop <|-- Ultrabook
+Laptop <|-- WorkstationLaptop
+Laptop <|-- ConvertibleLaptop
+Laptop <|-- BudgetLaptop
+Laptop <|-- SmartLaptop
+
+'==================================================
+' Smart Laptop Specializations
+'==================================================
+class LightweightSmartLaptop
+class PerformanceSmartLaptop
+class AIEnabledSmartLaptop
+class DeveloperSmartLaptop
+class StudentSmartLaptop
+class BusinessSmartLaptop
+class GamingSmartLaptop
+class MedicalUseSmartLaptop
+class MultiPurposeSmartLaptop
+class SlimSmartLaptop
+class SpecialistSmartLaptop
+
+SmartLaptop <|-- LightweightSmartLaptop
+SmartLaptop <|-- PerformanceSmartLaptop
+SmartLaptop <|-- AIEnabledSmartLaptop
+SmartLaptop <|-- DeveloperSmartLaptop
+SmartLaptop <|-- StudentSmartLaptop
+SmartLaptop <|-- BusinessSmartLaptop
+SmartLaptop <|-- GamingSmartLaptop
+SmartLaptop <|-- MedicalUseSmartLaptop
+SmartLaptop <|-- MultiPurposeSmartLaptop
+SmartLaptop <|-- SlimSmartLaptop
+SmartLaptop <|-- SpecialistSmartLaptop
+
+'==================================================
+' Laptop Characteristics
+'==================================================
+class LaptopCharacteristic
+class PerformanceCharacteristic
+class DisplayCharacteristic
+class BatteryCharacteristic
+class PortabilityCharacteristic
+class ThermalCharacteristic
+class SecurityCharacteristic
+class ConnectivityCharacteristic
+class DurabilityCharacteristic
+
+LaptopCharacteristic <|-- PerformanceCharacteristic
+LaptopCharacteristic <|-- DisplayCharacteristic
+LaptopCharacteristic <|-- BatteryCharacteristic
+LaptopCharacteristic <|-- PortabilityCharacteristic
+LaptopCharacteristic <|-- ThermalCharacteristic
+LaptopCharacteristic <|-- SecurityCharacteristic
+LaptopCharacteristic <|-- ConnectivityCharacteristic
+LaptopCharacteristic <|-- DurabilityCharacteristic
+
+
+
+'==================================================
+' Laptop Components
+'==================================================
+class LaptopComponent
+class Battery
+class Keyboard
+class Touchpad
+class Display
+class Processor
+class GraphicsCard
+class RAM
+class Storage
+class Motherboard
+class CoolingFan
+class Webcam
+
+LaptopComponent <|-- Battery
+LaptopComponent <|-- Keyboard
+LaptopComponent <|-- Touchpad
+LaptopComponent <|-- Display
+LaptopComponent <|-- Processor
+LaptopComponent <|-- GraphicsCard
+LaptopComponent <|-- RAM
+LaptopComponent <|-- Storage
+LaptopComponent <|-- Motherboard
+LaptopComponent <|-- CoolingFan
+LaptopComponent <|-- Webcam
+
+'==================================================
+' Ports and Interfaces
+'==================================================
+class Port
+class USBPort
+class USB_A
+class USB_C
+class HDMI
+class Thunderbolt
+class AudioJack
+
+Port <|-- USBPort
+USBPort <|-- USB_A
+USBPort <|-- USB_C
+Port <|-- HDMI
+Port <|-- Thunderbolt
+Port <|-- AudioJack
+
+'==================================================
+' Sensors
+'==================================================
+class Sensor
+class AmbientLightSensor
+class TemperatureSensor
+class Accelerometer
+class ProximitySensor
+
+Sensor <|-- AmbientLightSensor
+Sensor <|-- TemperatureSensor
+Sensor <|-- Accelerometer
+Sensor <|-- ProximitySensor
+
+'==================================================
+' Security Mechanisms
+'==================================================
+class SecuringMechanism
+class FingerprintScanner
+class FaceRecognition
+class TPMChip
+class KensingtonLock
+class BIOSPassword
+
+SecuringMechanism <|-- FingerprintScanner
+SecuringMechanism <|-- FaceRecognition
+SecuringMechanism <|-- TPMChip
+SecuringMechanism <|-- KensingtonLock
+SecuringMechanism <|-- BIOSPassword
+
+
+
+'==================================================
+' Operating Systems
+'==================================================
+class OperatingSystem
+class WindowsOS
+class LinuxOS
+class MacOS
+
+
+OperatingSystem <|-- WindowsOS
+OperatingSystem <|-- LinuxOS
+OperatingSystem <|-- MacOS
+
+'==================================================
+' Laptop Make
+'==================================================
+class LaptopMake
+class Dell
+class HP
+class Lenovo
+class Apple
+class ASUS
+class Acer
+class MSI
+class Samsung
+
+LaptopMake <|-- Dell
+LaptopMake <|-- HP
+LaptopMake <|-- Lenovo
+LaptopMake <|-- Apple
+LaptopMake <|-- ASUS
+LaptopMake <|-- Acer
+LaptopMake <|-- MSI
+LaptopMake <|-- Samsung
+
+'==================================================
+' Associations (Object Properties)
+'==================================================
+Laptop --> LaptopComponent : hasComponent
+Laptop --> LaptopCharacteristic : hasCharacteristic
+Laptop --> Sensor : hasSensor
+Laptop --> SecuringMechanism : hasSecurity
+Laptop --> Port : hasPort
+Laptop --> OperatingSystem : runsOS
+Laptop --> LaptopMake : madeBy
+
+@enduml
